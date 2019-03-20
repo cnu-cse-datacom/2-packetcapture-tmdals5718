@@ -63,7 +63,7 @@ def parsing_tcp_header(data):
     tcp_seq_num = tcp_header[2]
     tcp_ack_num = tcp_header[3]
     tcp_header_len = tcp_header[4] >> 12
-    tcp_flags = tcp_header[4] & 8191  
+    tcp_flags = tcp_header[4] & 4095  
     tcp_resrved = tcp_header[4] >> 9  & 7
     tcp_nonce  = tcp_header[4] >> 8 & 1
     tcp_cwr = tcp_header[4] >> 7  & 1
